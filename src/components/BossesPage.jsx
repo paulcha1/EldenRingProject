@@ -1,36 +1,55 @@
-import React, { useState } from "react";
-import axios from "axios";
-import Header from "../components/Header";
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-function BossesPage() {
+function BossesPage({ onRegionClick }) {
   const [bosses, setBosses] = useState([]);
+  const [filteredBosses, setFilteredBosses] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState("");
+  function handleItemClick(bossRegion) {
+    if (onRegionClick) {
+      onRegionClick(bossRegion);
+    }
+  }
 
   useEffect(() => {
-    // Fetching the bosses from the API
-
-    fetch("https://eldenring.fanapis.com/api/bosses?limit=106")
-      .then((response) => response.json())
-      .then((data) => setBosses(data))
-      .catch((error) => {
-        console.log("Error fetching bosses:", error);
-      });
+    fetchBosses();
   }, []);
+
+  async function fetchBosses() {
+    try {
+      const response = await fetch(
+        "https://eldenring.fanapis.com/api/bosses?limit=106"
+      );
+      const data = await response.json();
+      setBosses(data.data);
+    } catch (error) {
+      console.error("Error fetching bosses:", error);
+    }
+  }
 
   return (
     <div>
-      <Header />
-      <h2>Region- BOSSES</h2>
-      <ul>
-        {bosses.map(
-          boss(
-            <li key={boss.id}>
-              <link to={`/bosses/${boss.id}`}>{boss.name}</link>
-            </li>
-          )
-        )}
-      </ul>
+      {/*       {bosses.length === 0 ? (
+        <p>Loading bosses...</p>
+      ) : (
+        <>
+          <ul>
+            {bosses.map((boss) => (
+              <li key={boss.id} onClick={() => handleItemClick(boss.region)}>
+                {boss.name} - {boss.region}
+              </li>
+            ))}
+          </ul>
+          {Array.isArray(filteredBosses) && (
+            <ul>
+              {filteredBosses.map((boss) => (
+                <li key={boss.id}>
+                  {boss.name} - {boss.region}
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
+      )} */}
     </div>
   );
 }
