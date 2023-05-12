@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 function BossesPage({ onRegionClick }) {
   const [bosses, setBosses] = useState([]);
   const [filteredBosses, setFilteredBosses] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("");
+
+  console.log("onregionClick=", onRegionClick);
+
   function handleItemClick(bossRegion) {
     if (onRegionClick) {
       onRegionClick(bossRegion);
@@ -13,6 +15,10 @@ function BossesPage({ onRegionClick }) {
   useEffect(() => {
     fetchBosses();
   }, []);
+
+  useEffect(() => {
+    filterBossesByRegion();
+  }, [onRegionClick]);
 
   async function fetchBosses() {
     try {
@@ -26,9 +32,23 @@ function BossesPage({ onRegionClick }) {
     }
   }
 
+  function filterBossesByRegion() {
+    if (onRegionClick === "") {
+      setFilteredBosses(bosses);
+    } else {
+      const filteredBosses = bosses.filter(
+        (boss) => boss.region === onRegionClick
+      );
+      setFilteredBosses(filteredBosses);
+      console.log("hello", setFilteredBosses(filteredBosses));
+      console.log("hello2", filteredBosses);
+      console.log("hello3", bosses);
+    }
+  }
+
   return (
     <div>
-      {/*       {bosses.length === 0 ? (
+      {bosses.length === 0 ? (
         <p>Loading bosses...</p>
       ) : (
         <>
@@ -49,7 +69,7 @@ function BossesPage({ onRegionClick }) {
             </ul>
           )}
         </>
-      )} */}
+      )}
     </div>
   );
 }

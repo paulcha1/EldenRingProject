@@ -14,19 +14,25 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState("");
 
   function handleRegionClick(region) {
-    console.log("clickregion", region);
     setSelectedRegion(region);
+    console.log("clickregion", region);
   }
 
   return (
     <>
       <div className="App">
         <Routes>
-          <Route path="*" element={<Homepage />} />
-          <Route path="/BossesPage" element={<BossesPage />}></Route>
+          <Route
+            path="*"
+            element={<Homepage handleRegionClick={handleRegionClick} />}
+          />
+          <Route
+            path="/BossesPage"
+            element={<BossesPage onRegionClick={selectedRegion} />}
+          ></Route>
           <Route element="/BeastPage">
             <Route path="/BeastPage" element={<BeastPage />} />
-            <Route path=":id" element={<BeastDetails />} />
+            <Route path="/BeastPage/:id" element={<BeastDetails />} />
           </Route>
         </Routes>
       </div>
