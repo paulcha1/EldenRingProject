@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderBG from "../assets/headertry.jpg";
+import HeaderBG from "/public/assets/headertry.jpg";
 
 function Header() {
   return (
     <header className="eldenHeader">
       <Link to="/">
-        <img src={HeaderBG} alt="Homepage" />
+        <img src={HeaderBG} alt="Elden-Ring-header-image " />
       </Link>
     </header>
   );
