@@ -1,7 +1,7 @@
 import React from "react";
 
 function BeastPage() {
-  return <div>BeastPage</div>;
+  return <div>hello</div>;
 }
 
 export default BeastPage;
