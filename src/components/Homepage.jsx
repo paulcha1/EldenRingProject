@@ -3,7 +3,6 @@ import "../App.css";
 import BeastDetails from "../components/BeastDetails";
 import BeastPage from "../components/BeastPage";
 import Header from "../components/Header";
-import SearchBar from "../components/SearchBar";
 import BottomFooter from "../components/BottomFooter";
 import { Link } from "react-router-dom";
 import BossesPage from "./BossesPage";
@@ -33,7 +32,7 @@ function Homepage() {
             <li>Miquella's Haligtree</li>
             <li>Others</li>
           </ul>
-          <BossesPage></BossesPage>
+          <BeastPage></BeastPage>
           <BottomFooter></BottomFooter>
         </div>
       </div>
