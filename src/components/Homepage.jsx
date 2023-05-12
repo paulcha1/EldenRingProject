@@ -6,10 +6,9 @@ import Header from "../components/Header";
 import BottomFooter from "../components/BottomFooter";
 import { Link } from "react-router-dom";
 import BossesPage from "./BossesPage";
-/* import BossList from "./BossList"; */
 import { useState } from "react";
 
-function Homepage() {
+function Homepage({ handleRegionClick }) {
   return (
     <>
       <div>
