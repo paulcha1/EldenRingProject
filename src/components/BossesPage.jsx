@@ -56,6 +56,7 @@ function BossesPage({ onRegionClick }) {
 
   return (
     <div>
+      <div>{region}</div>
       {bosses.length === 0 ? (
         <p>Loading bosses...</p>
       ) : (
@@ -63,16 +64,14 @@ function BossesPage({ onRegionClick }) {
           <ul>
             {bosses.map((boss) => (
               <li key={boss.id} onClick={() => handleItemClick(boss.region)}>
-                {boss.name} - {boss.region}
+                {boss.name}
               </li>
             ))}
           </ul>
           {Array.isArray(filteredBosses) && (
             <ul>
               {filteredBosses.map((boss) => (
-                <li key={boss.id}>
-                  {boss.name} - {boss.region}
-                </li>
+                <li key={boss.id}>{boss.name}</li>
               ))}
             </ul>
           )}
