@@ -25,14 +25,14 @@ function BeastDetails() {
     return <div>Loading Beasts Details...</div>;
   }
 
-  const { image_url, name, description, location, drops } = beastDetails;
+  const { image, name, description, location, drops } = beastDetails;
 
   return (
     <div>
       <Header />
       <div className="beastDetails-container">
-        <img src={image_url} alt={name} id="beastImage" />
-        {console.log("paul", image_url)};
+        <img src={image} alt={name} id="beastImage" />
+        {console.log("paul", image)}
         <div className="beast-details">
           <h2>{name}</h2>
           <p>{description}</p>
