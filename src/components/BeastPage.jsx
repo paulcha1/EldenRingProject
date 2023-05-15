@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function BeastPage() {
   const [beasts, setBeasts] = useState([]);
@@ -32,7 +33,9 @@ function BeastPage() {
         <>
           <ul>
             {beasts.map((beast) => (
-              <li key={beast.id}>{beast.name}</li>
+              <Link to="/BeastPage/:id">
+                <li key={beast.id}>{beast.name}</li>
+              </Link>
             ))}
           </ul>
         </>
