@@ -59,7 +59,9 @@ function Homepage({ handleRegionClick }) {
               </Link>
             </li>
           </ul>
-          <BeastPage />
+          <div>
+            <Link to="/Beastpage">Beast Page</Link>
+          </div>
           <BottomFooter />
         </div>
       </div>

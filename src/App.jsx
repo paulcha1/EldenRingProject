@@ -30,7 +30,7 @@ function App() {
             path="/BossesPage/:region"
             element={<BossesPage onRegionClick={selectedRegion} />}
           ></Route>
-          <Route element="/BeastPage">
+          <Route>
             <Route path="/BeastPage" element={<BeastPage />} />
             <Route path="/BeastPage/:id" element={<BeastDetails />} />
           </Route>
