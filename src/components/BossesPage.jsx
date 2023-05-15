@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function BossesPage({ onRegionClick }) {
   const [bosses, setBosses] = useState([]);
   const [filteredBosses, setFilteredBosses] = useState([]);
-
+  const { region } = useParams();
+  const transformedRegion = region.split("-").join(" ");
+  console.log(transformedRegion);
   console.log("onregionClick=", onRegionClick);
 
   function handleItemClick(bossRegion) {
@@ -16,9 +19,9 @@ function BossesPage({ onRegionClick }) {
     fetchBosses();
   }, []);
 
-  useEffect(() => {
-    filterBossesByRegion();
-  }, [onRegionClick]);
+  // useEffect(() => {
+  //   filterBossesByRegion();
+  // }, [onRegionClick]);
 
   async function fetchBosses() {
     try {
@@ -26,25 +29,30 @@ function BossesPage({ onRegionClick }) {
         "https://eldenring.fanapis.com/api/bosses?limit=106"
       );
       const data = await response.json();
-      setBosses(data.data);
+      const bossesArray = data.data;
+      const filteredBosses = bossesArray.filter(
+        (boss) => boss.region === transformedRegion
+      );
+      console.log(filteredBosses);
+      setBosses(filteredBosses);
     } catch (error) {
       console.error("Error fetching bosses:", error);
     }
   }
 
-  function filterBossesByRegion() {
-    if (onRegionClick === "") {
-      setFilteredBosses(bosses);
-    } else {
-      const filteredBosses = bosses.filter(
-        (boss) => boss.region === onRegionClick
-      );
-      setFilteredBosses(filteredBosses);
-      console.log("hello", setFilteredBosses(filteredBosses));
-      console.log("hello2", filteredBosses);
-      console.log("hello3", bosses);
-    }
-  }
+  // function filterBossesByRegion() {
+  //   if (onRegionClick === "") {
+  //     setFilteredBosses(bosses);
+  //   } else {
+  //     const filteredBosses = bosses.filter(
+  //       (boss) => boss.region === onRegionClick
+  //     );
+  //     setFilteredBosses(filteredBosses);
+  //     console.log("hello", setFilteredBosses(filteredBosses));
+  //     console.log("hello2", filteredBosses);
+  //     console.log("hello3", bosses);
+  //   }
+  // }
 
   return (
     <div>
