@@ -27,7 +27,7 @@ function App() {
             element={<Homepage handleRegionClick={handleRegionClick} />}
           />
           <Route
-            path="/BossesPage"
+            path="/BossesPage/:region"
             element={<BossesPage onRegionClick={selectedRegion} />}
           ></Route>
           <Route element="/BeastPage">
