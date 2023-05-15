@@ -7,34 +7,37 @@ function BeastDetails() {
   const [beastDetails, setBeastDetails] = useState(null);
   const params = useParams();
 
-  useEffect(() => {
+  function getDetails() {
     axios
-      .get(
-        `https://eldenring.fanapis.com/api/creatures/:creature_id/${params.id}`
-      )
+      .get(`https://eldenring.fanapis.com/api/creatures/${params.id}`)
       .then((response) => {
-        setBeastDetails(response.data);
+        console.log(response);
+        setBeastDetails(response.data.data);
+        console.log(beastDetails);
       })
       .catch((e) => console.log(e));
+  }
+  useEffect(() => {
+    getDetails();
   }, [params.id]);
 
   if (!beastDetails) {
     return <div>Loading Beasts Details...</div>;
   }
 
-  const { Image_url, Name, Description, Location, Drops } = beastDetails;
+  const { image_url, name, description, location, drops } = beastDetails;
 
   return (
     <div>
       <Header />
       <div className="beastDetails-container">
-        <img src={Image_url} alt={Name} id="beastImage" />
-
+        <img src={image_url} alt={name} id="beastImage" />
+        {console.log("paul", image_url)};
         <div className="beast-details">
-          <h2>{Name}</h2>
-          <p>{Description}</p>
-          <p>Location: {Location}</p>
-          <p>Drops: {Drops}</p>
+          <h2>{name}</h2>
+          <p>{description}</p>
+          <p>Location: {location}</p>
+          <p>Drops: {drops}</p>
         </div>
       </div>
     </div>

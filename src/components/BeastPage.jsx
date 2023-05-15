@@ -33,7 +33,7 @@ function BeastPage() {
         <>
           <ul>
             {beasts.map((beast) => (
-              <Link to="/BeastPage/:id">
+              <Link to={`/BeastPage/${beast.id}`}>
                 <li key={beast.id}>{beast.name}</li>
               </Link>
             ))}
