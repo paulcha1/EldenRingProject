@@ -26,10 +26,13 @@ function App() {
             path="*"
             element={<Homepage handleRegionClick={handleRegionClick} />}
           />
-          <Route
-            path="/BossesPage/:region"
-            element={<BossesPage onRegionClick={selectedRegion} />}
-          ></Route>
+          <Route>
+            <Route
+              path="/BossesPage/:region"
+              element={<BossesPage onRegionClick={selectedRegion} />}
+            />
+            <Route path="/BossesPage/:region/:id" element={<BeastDetails />} />
+          </Route>
           <Route>
             <Route path="/BeastPage" element={<BeastPage />} />
             <Route path="/BeastPage/:id" element={<BeastDetails />} />
