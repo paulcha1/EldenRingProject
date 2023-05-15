@@ -40,9 +40,6 @@ function Homepage({ handleRegionClick }) {
             <li onClick={() => handleRegionClick("Mount Gelmir")}>
               <Link to="/BossesPage/Mount-Gelmir">Mount Gelmir</Link>
             </li>
-            <li onClick={() => handleRegionClick("Capital Outskirts")}>
-              <Link to="/BossesPage/Capital-Outskirts">Capital Outskirts</Link>
-            </li>
 
             <li onClick={() => handleRegionClick("Mountaintops of the Giants")}>
               <Link to="/BossesPage/Mountaintops-of-the-Giants">

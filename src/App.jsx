@@ -3,11 +3,9 @@ import "./App.css";
 import BeastDetails from "./components/BeastDetails";
 import BeastPage from "./components/BeastPage";
 import Homepage from "./components/Homepage";
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
 import BottomFooter from "./components/BottomFooter";
 import { Route, Routes } from "react-router";
-/* import BossList from "./components/BossList"; */
+import BossesDetails from "./components/BossesDetails";
 import BossesPage from "./components/BossesPage";
 
 function App() {
@@ -31,7 +29,7 @@ function App() {
               path="/BossesPage/:region"
               element={<BossesPage onRegionClick={selectedRegion} />}
             />
-            <Route path="/BossesPage/:region/:id" element={<BeastDetails />} />
+            <Route path="/BossesPage/:region/:id" element={<BossesDetails />} />
           </Route>
           <Route>
             <Route path="/BeastPage" element={<BeastPage />} />
