@@ -12,7 +12,6 @@ function Homepage({ handleRegionClick }) {
     <>
       <div>
         <Header />
-
         <div className="home">
           <ul className="ul">
             <li id="Limgrave" onClick={() => handleRegionClick("Limgrave")}>
@@ -93,8 +92,10 @@ function Homepage({ handleRegionClick }) {
               </Link>
             </li>
           </ul>
-          <div>
-            <Link to="/BeastPage">Beast Page</Link>
+          <div id="goToBeastpage">
+            <Link id="linktobeastpage" to="/BeastPage">
+              Bestiary
+            </Link>
           </div>
           <BottomFooter />
         </div>
