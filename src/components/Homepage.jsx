@@ -14,9 +14,7 @@ function Homepage({ handleRegionClick }) {
     <>
       <div>
         <Header />
-
         <div className="home">
-          <h2>The Lands Between</h2>
           <ul className="ul">
             <li id="Limgrave" onClick={() => handleRegionClick("Limgrave")}>
               <Link className="liurnaCard" to="/BossesPage/Limgrave">
@@ -96,8 +94,10 @@ function Homepage({ handleRegionClick }) {
               </Link>
             </li>
           </ul>
-          <div>
-            <Link to="/BeastPage">Beast Page</Link>
+          <div id="goToBeastpage">
+            <Link id="linktobeastpage" to="/BeastPage">
+              Bestiary
+            </Link>
           </div>
           <BottomFooter />
         </div>
@@ -105,3 +105,5 @@ function Homepage({ handleRegionClick }) {
     </>
   );
 }
+
+export default Homepage;
