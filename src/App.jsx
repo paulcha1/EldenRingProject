@@ -1,3 +1,4 @@
+import Homepage from "./components/Homepage";
 import React, { useState } from "react";
 import "./App.css";
 import BeastDetails from "./components/BeastDetails";
@@ -7,7 +8,6 @@ import { Route, Routes } from "react-router";
 import BossesDetails from "./components/BossesDetails";
 import BossesPage from "./components/BossesPage";
 import "./components/HomepageStyle.css";
-import Homepage from "./components/Homepage";
 
 function App() {
   const [selectedRegion, setSelectedRegion] = useState("");
