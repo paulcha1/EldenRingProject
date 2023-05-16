@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import "../components/BossesList.css";
 
 function BeastPage() {
   const [beasts, setBeasts] = useState([]);
@@ -27,15 +28,27 @@ function BeastPage() {
 
   return (
     <div>
-      <div>Beasts </div>
+      <div className="BeastsBox">Beasts</div>
+      <div className="BeastsList"></div>
+      <div className="BeastsContainer"></div>
       {beasts.length === 0 ? (
         <p>Loading Beasts...</p>
       ) : (
         <>
-          <ul>
+          <ul className="AllBeasts">
             {beasts.map((beast) => (
               <Link to={`/BeastPage/${beast.id}`}>
-                <li key={beast.id}>{beast.name}</li>
+                <li
+                  className="BeastsList"
+                  key={beast.id}
+                  style={{
+                    backgroundImage: `url(${beast.image})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  {beast.name}
+                </li>
               </Link>
             ))}
           </ul>
