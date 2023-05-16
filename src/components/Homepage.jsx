@@ -1,13 +1,11 @@
 import React from "react";
-import "../App.css";
+import "./HomepageStyle.css";
 import BeastDetails from "../components/BeastDetails";
 import BeastPage from "../components/BeastPage";
 import Header from "../components/Header";
 import BottomFooter from "../components/BottomFooter";
 import { Link } from "react-router-dom";
-import BossesPage from "./BossesPage";
 import { useState } from "react";
-import "./HomepageStyle.css";
 
 function Homepage({ handleRegionClick }) {
   return (
@@ -16,7 +14,6 @@ function Homepage({ handleRegionClick }) {
         <Header />
 
         <div className="home">
-          <h2>The Lands Between</h2>
           <ul className="ul">
             <li id="Limgrave" onClick={() => handleRegionClick("Limgrave")}>
               <Link className="liurnaCard" to="/BossesPage/Limgrave">
@@ -105,3 +102,5 @@ function Homepage({ handleRegionClick }) {
     </>
   );
 }
+
+export default Homepage;
