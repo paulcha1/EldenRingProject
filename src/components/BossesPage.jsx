@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function BossesPage({ onRegionClick }) {
+  console.log("hello bosses page");
   const [bosses, setBosses] = useState([]);
   const [filteredBosses, setFilteredBosses] = useState([]);
   const { region } = useParams();
@@ -44,7 +45,7 @@ function BossesPage({ onRegionClick }) {
         <>
           <ul>
             {bosses.map((boss) => (
-              <Link to={`/BossesPage/${boss.id}`}>
+              <Link to={`/BossesPage/${boss.region}/${boss.id}`}>
                 <li key={boss.id}>{boss.name}</li>
               </Link>
             ))}
