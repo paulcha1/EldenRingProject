@@ -1,13 +1,11 @@
 import React from "react";
-import "../App.css";
+import "./HomepageStyle.css";
 import BeastDetails from "../components/BeastDetails";
 import BeastPage from "../components/BeastPage";
 import Header from "../components/Header";
 import BottomFooter from "../components/BottomFooter";
 import { Link } from "react-router-dom";
-import BossesPage from "./BossesPage";
 import { useState } from "react";
-import "./HomepageStyle.css";
 
 function Homepage({ handleRegionClick }) {
   return (
