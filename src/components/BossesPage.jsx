@@ -55,4 +55,6 @@ function BossesPage({ onRegionClick }) {
   );
 }
 
+// does it work now ?
+
 export default BossesPage;
