@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../components/BossesList.css";
 
 function BossesPage({ onRegionClick }) {
   console.log("hello bosses page");
@@ -37,7 +38,7 @@ function BossesPage({ onRegionClick }) {
   }
 
   return (
-    <div>
+    <div className="BossesContainer">
       <div>{region}</div>
       {bosses.length === 0 ? (
         <p>Loading bosses...</p>
@@ -46,7 +47,9 @@ function BossesPage({ onRegionClick }) {
           <ul>
             {bosses.map((boss) => (
               <Link to={`/BossesPage/${boss.region}/${boss.id}`}>
-                <li key={boss.id}>{boss.name}</li>
+                <li className="BossesList" key={boss.id}>
+                  {boss.name}
+                </li>
               </Link>
             ))}
           </ul>
@@ -55,7 +58,5 @@ function BossesPage({ onRegionClick }) {
     </div>
   );
 }
-
-// does it work now ?
 
 export default BossesPage;
