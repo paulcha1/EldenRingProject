@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderBG from "/public/assets/headertry.jpg";
+import HeaderBG from "/public/assets/eldenring_new.png";
 
 function Header() {
   return (

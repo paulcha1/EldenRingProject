@@ -7,6 +7,7 @@ import BottomFooter from "../components/BottomFooter";
 import { Link } from "react-router-dom";
 import BossesPage from "./BossesPage";
 import { useState } from "react";
+import "./HomepageStyle.css";
 
 function Homepage({ handleRegionClick }) {
   return (
@@ -17,38 +18,80 @@ function Homepage({ handleRegionClick }) {
         <div className="home">
           <h2>The Lands Between</h2>
           <ul className="ul">
-            <li onClick={() => handleRegionClick("Limgrave")}>
-              <Link to="/BossesPage/Limgrave">Limgrave</Link>
+            <li id="Limgrave" onClick={() => handleRegionClick("Limgrave")}>
+              <Link className="liurnaCard" to="/BossesPage/Limgrave">
+                Limgrave
+              </Link>
             </li>
-            <li onClick={() => handleRegionClick("Weeping Peninsula")}>
-              <Link to="/BossesPage/Weeping-Peninsula">Weeping Peninsula</Link>
+            <li
+              id="Weeping-Peninsula"
+              onClick={() => handleRegionClick("Weeping Peninsula")}
+            >
+              <Link className="liurnaCard" to="/BossesPage/Weeping-Peninsula">
+                Weeping Peninsula
+              </Link>
             </li>
-            <li onClick={() => handleRegionClick("Liurnia of the Lakes")}>
-              <Link to="/BossesPage/Liurnia-of-the-Lakes">
+            <li
+              id="Liurnia-of-the-Lakes"
+              onClick={() => handleRegionClick("Liurnia of the Lakes")}
+            >
+              <Link
+                className="liurnaCard"
+                to="/BossesPage/Liurnia-of-the-Lakes"
+              >
                 Liurnia of the Lakes
               </Link>
             </li>
-            <li onClick={() => handleRegionClick("Caelid")}>
-              <Link to="/BossesPage/Caelid">Caelid</Link>
+            <li id="Caelid" onClick={() => handleRegionClick("Caelid")}>
+              <Link className="liurnaCard" to="/BossesPage/Caelid">
+                Caelid
+              </Link>
             </li>
-            <li onClick={() => handleRegionClick("Dragonbarrow")}>
-              <Link to="/BossesPage/Dragonbarrow">Dragonbarrow</Link>
+            <li
+              id="Dragonbarrow"
+              onClick={() => handleRegionClick("Dragonbarrow")}
+            >
+              <Link className="liurnaCard" to="/BossesPage/Dragonbarrow">
+                Dragonbarrow
+              </Link>
             </li>
-            <li onClick={() => handleRegionClick("Altus Plateau")}>
-              <Link to="/BossesPage/Altus-Plateau">Altus Plateau</Link>
+            <li
+              id="Altus-Plateau"
+              onClick={() => handleRegionClick("Altus Plateau")}
+            >
+              <Link className="liurnaCard" to="/BossesPage/Altus-Plateau">
+                Altus Plateau
+              </Link>
             </li>
-            <li onClick={() => handleRegionClick("Mount Gelmir")}>
-              <Link to="/BossesPage/Mount-Gelmir">Mount Gelmir</Link>
+            <li
+              id="Mount-Gelmir"
+              onClick={() => handleRegionClick("Mount Gelmir")}
+            >
+              <Link className="liurnaCard" to="/BossesPage/Mount-Gelmir">
+                Mount Gelmir
+              </Link>
             </li>
 
-            <li onClick={() => handleRegionClick("Mountaintops of the Giants")}>
-              <Link to="/BossesPage/Mountaintops-of-the-Giants">
+            <li
+              id="Mountaintops-of-the-Giants"
+              onClick={() => handleRegionClick("Mountaintops of the Giants")}
+            >
+              <Link
+                className="liurnaCard"
+                to="/BossesPage/Mountaintops-of-the-Giants"
+              >
                 Mountaintops of the Giants
               </Link>
             </li>
 
-            <li onClick={() => handleRegionClick("Consecrated Snowfield")}>
-              <Link to="/BossesPage/Consecrated-Snowfield">
+            <li
+              id="Consecrated-Snowfield"
+              onClick={() => handleRegionClick("Consecrated Snowfield")}
+            >
+              <Link
+                className="liurnaCard"
+                to="/BossesPage/Consecrated-Snowfield"
+              >
                 Consecrated Snowfield
               </Link>
             </li>
@@ -62,5 +105,3 @@ function Homepage({ handleRegionClick }) {
     </>
   );
 }
-
-export default Homepage;
