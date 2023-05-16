@@ -39,15 +39,23 @@ function BossesPage({ onRegionClick }) {
 
   return (
     <div className="BossesContainer">
-      <div>{region}</div>
+      <div className="RegionBox">{region}</div>
       {bosses.length === 0 ? (
         <p>Loading bosses...</p>
       ) : (
         <>
-          <ul>
+          <ul className="AllBosses">
             {bosses.map((boss) => (
               <Link to={`/BossesPage/${boss.region}/${boss.id}`}>
-                <li className="BossesList" key={boss.id}>
+                <li
+                  className="BossesList"
+                  key={boss.id}
+                  style={{
+                    backgroundImage: `url(${boss.image})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
                   {boss.name}
                 </li>
               </Link>
