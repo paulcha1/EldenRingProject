@@ -20,11 +20,40 @@
   padding: 10px;
   box-sizing: border-box;
   box-shadow: 10px 5px 5px black;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Cinzel Decorative", cursive;
   font-size: 24px;
 }
 
 .RegionBox {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: x-large;
+}
+
+.AllBeasts {
+  list-style: none;
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: repeat(3, 1fr);
+  color: beige;
+}
+
+.AllBeasts li {
+  border: 1px solid black;
+  display: grid;
+  height: 150px;
+  width: 250px;
+  color: beige;
+  border-radius: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 10px 5px 5px black;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 24px;
+}
+
+.BeastsBox {
   font-family: "Cinzel Decorative", cursive;
   font-size: x-large;
 }
