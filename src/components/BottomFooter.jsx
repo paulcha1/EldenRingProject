@@ -1,7 +1,7 @@
 import React from "react";
 
 function BottomFooter() {
-  return <div>Mohammad AlJariri & Paul Charousset</div>;
+  return <div>Made by Mohammad AlJariri & Paul Charousset©</div>;
 }
 
 export default BottomFooter;
