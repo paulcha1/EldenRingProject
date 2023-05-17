@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Header from "./Header";
 import "./HomepageStyle.css";
 import "./BossesDetailsStyle.css";
+import BottomFooter from "./BottomFooter";
 
 function BossesDetails() {
   const [bossesDetails, setBossesDetails] = useState(null);
@@ -39,6 +40,7 @@ function BossesDetails() {
           <p>Loot: {drops}</p>
         </div>
       </div>
+      <BottomFooter />
     </div>
   );
 }
