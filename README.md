@@ -18,10 +18,6 @@ To navigate this bestiary effectively, follow these steps:
 2-Explore the different sections to access the desired information about regions, bosses, and beasts.
 3-Use the provided API documentation as a reference to understand the data structure and properties of these game elements.
 
-QR code:
-
-<img src="https://eldenbestiary.netlify.app/qrCode.png.png" width = "230px" height = "230px" alt="qr Code" />
-
 Regions, Bosses, and Beasts:
 This bestiary focuses on the following elements of EldenRing:
 
