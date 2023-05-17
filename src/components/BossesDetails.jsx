@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
-import "./HomepageStyle.css";
-import "./BossesDetailsStyle.css";
-import BottomFooter from "./BottomFooter";
 
 function BossesDetails() {
   const [bossesDetails, setBossesDetails] = useState(null);
   const { region, id } = useParams();
+  console.log("paul ", region, id);
 
   function getBossesDetails() {
     axios
@@ -29,18 +27,18 @@ function BossesDetails() {
   const { image, name, description, location, drops } = bossesDetails;
 
   return (
-    <div className="bossesDetailAllPage">
+    <div>
+      bosse detail
       <Header />
       <div className="bossesDetails-container">
-        <h2 className="bossName">{name}</h2>
         <img src={image} alt={name} id="bossesImage" />
-        <div className="textDetails">
-          <p className="description">{description}</p>
+        <div className="bosses-details">
+          <h2>{name}</h2>
+          <p>{description}</p>
           <p>Location: {location}</p>
-          <p>Loot: {drops}</p>
+          <p>Drops: {drops}</p>
         </div>
       </div>
-      <BottomFooter />
     </div>
   );
 }
