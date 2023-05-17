@@ -10,6 +10,8 @@ function BossesPage({ onRegionClick }) {
   const [filteredBosses, setFilteredBosses] = useState([]);
   const { region } = useParams();
   const transformedRegion = region.split("-").join(" ");
+  console.log(region);
+  console.log("transform", transformedRegion);
 
   function handleItemClick(bossRegion) {
     if (onRegionClick) {
