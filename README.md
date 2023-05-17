@@ -15,7 +15,9 @@ How to Use the Bestiary:
 To navigate this bestiary effectively, follow these steps:
 
 1-Open the Bestiary in your prefered browser using the following url "https://eldenbestiary.netlify.app/".
+
 2-Explore the different sections to access the desired information about regions, bosses, and beasts.
+
 3-Use the provided API documentation as a reference to understand the data structure and properties of these game elements.
 
 QR code:
@@ -23,7 +25,7 @@ QR code:
 Regions, Bosses, and Beasts:
 This bestiary focuses on the following elements of EldenRing:
 
-Regions: The game is set in a vast open world comprising different regions. Each region has its own unique characteristics, lore, and challenges. Refer to the API documentation for detailed information about the regions.
+Regions: The game is set in a vast open world comprising different regions. Each region has its own unique characteristics, lore, and ennemies. Refer to the API documentation for detailed information about them.
 
 Bosses: EldenRing features formidable bosses that players must face and defeat to progress through the game. The bosses possess powerful abilities and often require strategic approaches to overcome. Explore the API documentation to discover detailed information about the bosses.
 
