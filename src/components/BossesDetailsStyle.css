@@ -38,6 +38,7 @@
   text-align: center;
   border-radius: 15px;
   opacity: 0.86;
+  box-shadow: 10px 5px 5px black;
 }
 
 .textDetails {
@@ -45,4 +46,17 @@
   width: 100%;
   background-color: rgb(52, 52, 61);
   opacity: 0.86;
+}
+
+.BeastsBox {
+  height: 70px;
+  width: 100%;
+  color: beige;
+  background-color: rgb(70, 67, 63);
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  box-shadow: 10px 5px 5px black;
 }

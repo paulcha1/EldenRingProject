@@ -1,13 +1,14 @@
+import "../components/BossesList.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import "../components/BossesList.css";
+import BottomFooter from "../components/BottomFooter";
 
 function BeastPage() {
   const [beasts, setBeasts] = useState([]);
 
-  console.log(beasts);
+  console.log("clgtry", beasts);
 
   useEffect(() => {
     fetchBeasts();
@@ -28,17 +29,17 @@ function BeastPage() {
 
   return (
     <div>
-      <div className="BeastsBox">Beasts</div>
+      <Header />
+      <h1 className="BeastsBox">Beasts</h1>
       {beasts.length === 0 ? (
         <p>Loading Beasts...</p>
       ) : (
         <>
           <ul className="AllBeasts">
             {beasts.map((beast) => (
-              <Link to={`/BeastPage/${beast.id}`}>
+              <Link key={beast.id} to={`/BeastPage/${beast.id}`}>
                 <li
                   className="BeastsList"
-                  key={beast.id}
                   style={{
                     backgroundImage: `url(${beast.image})`,
                     backgroundRepeat: "no-repeat",
@@ -52,6 +53,7 @@ function BeastPage() {
           </ul>
         </>
       )}
+      <BottomFooter />
     </div>
   );
 }

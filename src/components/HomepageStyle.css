@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
 
 body {
-  background-image: url(../public/assets/map1.webp);
+  background-image: url(/assets/map1.webp);
   background-size: contain;
   font-family: "Cinzel Decorative", cursive;
 }
@@ -9,7 +9,7 @@ body {
 .eldenHeader img {
   width: 65%;
   opacity: 0.86;
-  background-image: url(../public/assets/elden-ring-bg.webp);
+  background-image: url(/assets/elden-ring-bg.webp);
   background-size: cover;
   border-radius: 15px;
   margin: 10px;
@@ -36,56 +36,56 @@ body {
 }
 
 #Limgrave {
-  background-image: url(../public/assets/limgrave-location-elden-ring-wiki-guide.jpg);
+  background-image: url(/assets/limgrave-location-elden-ring-wiki-guide.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 24px;
 }
 
 #Weeping-Peninsula {
-  background-image: url(../public/assets/weeping-peninsula-location.png);
+  background-image: url(/assets/weeping-peninsula-location.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Liurnia-of-the-Lakes {
-  background-image: url(../public/assets/liurnia-lakes-hub-location.jpeg);
+  background-image: url(/assets/liurnia-lakes-hub-location.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Caelid {
-  background-image: url(../public/assets/caelid-hub-location.jpg);
+  background-image: url(/assets/caelid-hub-location.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Dragonbarrow {
-  background-image: url(../public/assets/dragonbarrow-region-location.jpeg);
+  background-image: url(/assets/dragonbarrow-region-location.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Altus-Plateau {
-  background-image: url(../public/assets/altus-plateau-location.jpg);
+  background-image: url(/assets/altus-plateau-location.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Mount-Gelmir {
-  background-image: url(../public/assets/mt-gelmir-location.jpg);
+  background-image: url(/assets/mt-gelmir-location.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Mountaintops-of-the-Giants {
-  background-image: url(../public/assets/mountaintops-giants-location.jpg);
+  background-image: url(/assets/mountaintops-giants-location.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #Consecrated-Snowfield {
-  background-image: url(../public/assets/consecrated-snowfield-location.webp);
+  background-image: url(/assets/consecrated-snowfield-location.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -108,7 +108,7 @@ body {
   box-shadow: 10px 5px 5px black;
   margin: 8% 19%;
   background-color: #000000;
-  background-image: url(../public/assets/eye.jpg);
+  background-image: url(/assets/eye.jpg);
   background-size: cover;
 }
 

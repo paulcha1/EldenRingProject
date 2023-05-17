@@ -3,4 +3,14 @@
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer {
+  font-style: italic;
+  font-size: small;
+  padding-top: 50px;
 }
