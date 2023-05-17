@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import BottomFooter from "./BottomFooter";
 
 function BeastDetails() {
   const [beastDetails, setBeastDetails] = useState(null);
@@ -37,6 +38,7 @@ function BeastDetails() {
           <p>Loot: {drops}</p>
         </div>
       </div>
+      <BottomFooter />
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../components/BossesList.css";
+import BottomFooter from "./BottomFooter";
+import Header from "./Header";
 
 function BossesPage({ onRegionClick }) {
   const [bosses, setBosses] = useState([]);
@@ -38,6 +40,7 @@ function BossesPage({ onRegionClick }) {
 
   return (
     <div className="BossesContainer">
+      <Header />
       <div className="RegionBox">{region}</div>
       {bosses.length === 0 ? (
         <p>Loading bosses...</p>
@@ -61,6 +64,7 @@ function BossesPage({ onRegionClick }) {
           </ul>
         </>
       )}
+      <BottomFooter />
     </div>
   );
 }
