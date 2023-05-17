@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../components/BossesList.css";
 
 function BossesPage({ onRegionClick }) {
-  console.log("hello bosses page");
   const [bosses, setBosses] = useState([]);
   const [filteredBosses, setFilteredBosses] = useState([]);
   const { region } = useParams();
@@ -46,10 +45,9 @@ function BossesPage({ onRegionClick }) {
         <>
           <ul className="AllBosses">
             {bosses.map((boss) => (
-              <Link to={`/BossesPage/${boss.region}/${boss.id}`}>
+              <Link key={boss.id} to={`/BossesPage/${boss.region}/${boss.id}`}>
                 <li
                   className="BossesList"
-                  key={boss.id}
                   style={{
                     backgroundImage: `url(${boss.image})`,
                     backgroundRepeat: "no-repeat",

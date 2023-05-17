@@ -11,9 +11,7 @@ function BeastDetails() {
     axios
       .get(`https://eldenring.fanapis.com/api/creatures/${params.id}`)
       .then((response) => {
-        console.log(response);
         setBeastDetails(response.data.data);
-        console.log(beastDetails);
       })
       .catch((e) => console.log(e));
   }
