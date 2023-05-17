@@ -28,16 +28,15 @@ function BeastDetails() {
   const { image, name, description, location, drops } = beastDetails;
 
   return (
-    <div>
+    <div className="bossesDetailAllPage">
       <Header />
-      <div className="beastDetails-container">
-        <img src={image} alt={name} id="beastImage" />
-        {console.log("paul", image)}
-        <div className="beast-details">
-          <h2>{name}</h2>
-          <p>{description}</p>
+      <div className="bossesDetails-container">
+        <h2 className="bossName">{name}</h2>
+        <img src={image} alt={name} id="bossesImage" />
+        <div className="textDetails">
+          <p className="description">{description}</p>
           <p>Location: {location}</p>
-          <p>Drops: {drops}</p>
+          <p>Loot: {drops}</p>
         </div>
       </div>
     </div>

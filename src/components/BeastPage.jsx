@@ -29,8 +29,6 @@ function BeastPage() {
   return (
     <div>
       <div className="BeastsBox">Beasts</div>
-      <div className="BeastsList"></div>
-      <div className="BeastsContainer"></div>
       {beasts.length === 0 ? (
         <p>Loading Beasts...</p>
       ) : (
