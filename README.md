@@ -20,6 +20,8 @@ To navigate this bestiary effectively, follow these steps:
 
 QR code:
 
+<img src="https://eldenbestiary.netlify.app/qrCode.png" width = "230px" height = "230px" alt="qr Code" />
+
 Regions, Bosses, and Beasts:
 This bestiary focuses on the following elements of EldenRing:
 
